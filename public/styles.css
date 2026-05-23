@@ -1,0 +1,63 @@
+/* Custom animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Line clamp for older browsers */
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ec4899;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #db2777;
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+/* Button active state */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Smooth hover effects */
+.hover\:scale-105:hover {
+  transition: transform 0.2s ease;
+}
